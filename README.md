@@ -11,11 +11,11 @@ You need the following roles
   - dynamodb:ListTables
   - dynamodb:Scan
   Resource: { 'Fn::Join': [ ':', [ 'arn:aws:dynamodb', { Ref: 'AWS::Region' }, { Ref: 'AWS::AccountId' }, 'table/*' ] ] }
-  - Effect: "Allow"
+- Effect: "Allow"
   Action:
   - s3:putObject
   Resource: 'arn:aws:s3:::handl-backup/*'
-  - Effect: "Allow"
+- Effect: "Allow"
   Action:
   - cognito-idp:ListIdentityPools
   - cognito-idp:ListUsers
